@@ -1,0 +1,2 @@
+=>Use this to show any customs value on frontend, the data of this plugin is save in wp_option table
+here we use theme_logo() function for showing data on frontend, basic use of this plugin is to show logo on frontend. 
