@@ -1,0 +1,4 @@
+<?php echo do_shortcode('[custom_form]'); ?>
+Use above code on any wordpress page for output the custom form.
+Above code is also use to output shortcode (echo do_shortcode('[custom_form]');).
+Here (custom_form) is the of shortcode function. 
