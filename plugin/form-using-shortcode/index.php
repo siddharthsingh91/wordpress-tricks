@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Custom Form With The Use Of Shortcode
  * Plugin URI: http://gaanaworld.com/
- * Description: A custom input field plugin.
+ * Description: Work with add_shortcode.
  * Version: 1.0
  * Author: Siddharth Singh
  * Author URI: http://gaanaworld.com/
