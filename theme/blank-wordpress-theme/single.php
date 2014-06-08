@@ -45,7 +45,7 @@
 <div class="col-md-1"></div>
 <div class="col-lg-10">
 <!-- Collect the nav links, forms, and other content for toggling -->
-<?php get_template_part( 'footer', 'menu' ); ?>
+<?php include("footer_menu.php"); ?>
 <!-- /.navbar-collapse -->
 <div class="col-md-1"></div>	
 </div>
