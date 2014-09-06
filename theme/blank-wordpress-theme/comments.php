@@ -13,9 +13,7 @@
     <div class="span9 offset3">
                     <div class="blog-comments">
 <?php if ( have_comments() ) : ?>
-
 	<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?></h2>
-
 	<div class="navigation">
 		<div class="next-posts"><?php previous_comments_link() ?></div>
 		<div class="prev-posts"><?php next_comments_link() ?></div>
@@ -58,9 +56,7 @@
 
 	comment_form();?>
 
-	
-    
-        <div>
+    <div>
         <ul class="pager">
         <li class="previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '<i class="icon-angle-left"></i>', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></li>
         <li class="next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '<i class="icon-angle-right"></i>', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></li>

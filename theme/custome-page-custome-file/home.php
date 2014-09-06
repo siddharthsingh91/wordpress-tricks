@@ -12,9 +12,5 @@
  */
 ?>
 <?php get_header( 'home' ); // Loads the header-home.php template.?>
-
-
-  <?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
-
-
- <?php get_footer();?>
+<?php get_template_part( 'menu', 'primary' ); // Loads the menu-primary.php template. ?>
+<?php get_footer();?>

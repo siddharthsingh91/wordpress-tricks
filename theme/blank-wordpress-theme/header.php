@@ -22,30 +22,5 @@
 
 
 <!-- Collect the nav links, forms, and other content for toggling -->
-<?php include("main_menu.php"); ?>
+<?php get_template_part( 'main', 'menu' ); ?>
 <!-- /.navbar-collapse -->
-
-
-<div class="container theme-showcase" role="main">
-<!--Logo Row Start-->
-<div class="row">
-<div class="col-md-1"></div>
-<div class="col-md-4"></div>
-<div class="col-md-2"></div>
-<div class="col-md-4">Give us a call Client Phone No</div>
-</div>
-<!--Logo Row End-->
-
-<!--menu row start-->
-<div class="row">
-<div class="col-md-1"></div>
-<div class="col-lg-10">
-
-<!-- Brand and toggle get grouped for better mobile display -->
-
-
-</div>  
-<div class="col-md-1"></div>	
-</div>
-<!--menu row end-->
-</div>

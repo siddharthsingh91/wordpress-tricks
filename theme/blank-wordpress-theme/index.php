@@ -10,14 +10,7 @@
  */
  get_header(); ?>
 
-
-<div class="row">
-<div class="col-md-1"></div>
-	<div class="col-lg-10">
- <?php include("main_menu.php"); ?>
-    </div>  
-<div class="col-md-1"></div>	
-	</div>
+<?php get_template_part( 'main', 'menu' ); ?>
 <div class="container theme-showcase" role="main">
 
 <?php if (have_posts()) : while (have_posts()) : ?>
@@ -38,7 +31,6 @@
 <?php comments_template(); ?>
 <?php endwhile; ?>
 <?php endif; ?>	
-</div>
 </div>
 <div  class="container theme-showcase">
 <div class="row">
