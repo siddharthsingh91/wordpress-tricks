@@ -17,7 +17,7 @@ class SimpleWidget extends WP_Widget{
 
 /**********************************************************************
 ****below method is calling parent class constructor to define name**** 
-****and description of widget which is shown in admin panel***********
+****and description of widget which is shown in admin panel************
 ***********************************************************************/	
 		$widget_options=array(
 		'classname'=> 'simple-widget',

@@ -2,8 +2,8 @@
 
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
-add_theme_support( 'post-thumbnails' );
-add_filter( 'widget_text', 'do_shortcode'); 
+require_once('wp-custom-post-template/wp-custom-post-template.php');
+add_theme_support( 'post-thumbnails' ); 
 
 
 /*function for serch form*/
@@ -31,10 +31,10 @@ add_filter( 'get_search_form', 'my_search_form' );
 ********************************************************/
 
 function theme_name_scripts() { 
-wp_enqueue_style('style', get_bloginfo('stylesheet_url'), false, '1.0', 'all');
+
 wp_enqueue_style( 'dsoble_theme_css', get_template_directory_uri() . '/css/jquery-ui-1.10.4.custom.min.css',array(),'1.1','all');
-wp_enqueue_style( 'dsoble_theme_css_one', get_template_directory_uri() . '/dist/css/bootstrap.min.css',array(),'1.1','all');
-wp_enqueue_style( 'dsoble_theme_css_two', get_template_directory_uri() . '/dist/css/bootstrap-theme.min.css',array(),'1.1','all');
+wp_enqueue_style( 'dsoble_theme_css_one', get_template_directory_uri() . '/dist/css/bootstrap.css',array(),'1.1','all');
+wp_enqueue_style( 'dsoble_theme_css_two', get_template_directory_uri() . '/dist/css/bootstrap-theme.css',array(),'1.1','all');
 wp_enqueue_style( 'dsoble_theme_css_three', get_template_directory_uri() . '/css/style.css',array(),'1.1','all');
 wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css',array(),'1.1','all');
 wp_enqueue_script( 'query-10', get_template_directory_uri() . '/js/jquery-1.10.2.js', array('jquery'), '1.0.0', true );	
@@ -309,6 +309,57 @@ add_action( 'widgets_init', 'fileworld_widgets_init' );
 
 
 
+/*****************************
+****Below Code For Comment****
+******************************/
+add_filter('comment_form_default_fields', 'custom_fields');
+function custom_fields($fields) {
+    $commenter = wp_get_current_commenter();
+    $req = get_option( 'require_name_email' );
+    $aria_req = ( $req ? " aria-required='true'" : '' );
+
+    $fields[ 'author' ] ='<div class="form-group">'. 	
+      '<label for="author">' . __( 'Name' ) . '</label>'.
+      ( $req ? '<span class="required">*</span>' : '' ).
+      '<input id="author" name="author" class="form-control" placeholder="Your Name*" type="text" value="'. esc_attr( $commenter['comment_author'] ) .
+      '" size="30" tabindex="1"' . $aria_req . ' /></div>';
+
+    $fields[ 'email' ] = '<div class="form-group">'.
+      '<label for="email">' . __( 'Email' ) . '</label>'.
+      ( $req ? '<span class="required">*</span>' : '' ).
+      '<input id="email" name="email" class="form-control" placeholder="Your Email*" type="text" value="'. esc_attr( $commenter['comment_author_email'] ) .
+      '" size="30"  tabindex="2"' . $aria_req . ' /></div>';
+
+    $fields[ 'url' ] =  '<div class="form-group">'.
+      '<label for="url">' . __( 'Website' ) . '</label>'.
+      '<input id="url" name="url" class="form-control" type="text"  placeholder="Your URL" value="'. esc_attr( $commenter['comment_author_url'] ) .
+      '" size="30"  tabindex="3" /></div>';
+
+    $fields[ 'phone' ] =  '<div class="form-group">'.
+      '<label for="phone">' . __( 'Phone' ) . '</label>'.
+      '<input id="phone" name="phone" class="form-control" placeholder="Your Phone" type="text" size="30"  tabindex="4" /></div>';
+	  
+	
+	$fields[ 'comment_field' ] =  '<div class="form-group">'.
+      '<label for="comment_field">' . __( 'Comment' ) . '</label>'.
+      '<textarea id="comment" name="comment" class="form-control" placeholder="Your Comment" rows="3"></textarea></div>';
+
+  return $fields;
+}
+
+/*****************************************************************
+****** How to chnage text area in wordpress comment***************
+You can filter 'comment_form_defaults' to change the textarea.**** 
+You get an array with the default fields as argument:*************
+******************************************************************/
+add_filter( 'comment_form_defaults', 'wpse_67503_textarea_insert' );
+function wpse_67503_textarea_insert( $fields ){
+   	$fields[ 'comment_field' ] =  '<div class="form-group">'.
+      '<label for="comment_field">' . __( 'Comment' ) . '</label>'.
+      '<textarea id="comment" name="comment" class="form-control" placeholder="Your Comment" rows="3"></textarea></div>';
+  return $fields;
+}
+
 /***********************************
 ****Below Code For Uploding Logo****
 ************************************/
@@ -321,11 +372,20 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'them
 'label'    => __( 'Logo', 'themeslug' ),'section'  => 'themeslug_logo_section','settings' => 'themeslug_logo') ) );}
 add_action('customize_register', 'themeslug_theme_customizer');
 
-
-
 /******************
 ******slider*******
 *******************/
 require_once('slider/cpt-bootstrap-carousel.php');
 
-?>
+/*******PHP for pagination*******/
+require_once('wp-paginate/wp-paginate.php');
+
+
+/*******Just Put Below function for pagination*******/
+function paginate_start(){
+if(function_exists('wp_paginate')) {
+wp_paginate();
+} else{ ?><ul class="pager">
+<li class="previous"><?php previous_posts_link('&laquo; Newer Posts'); ?></li>
+<li class="next"><?php next_posts_link('Older Posts &raquo;'); ?></li>
+</ul><?php } }?>
