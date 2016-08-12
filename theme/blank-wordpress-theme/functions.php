@@ -3,7 +3,9 @@
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
 add_theme_support( 'post-thumbnails' );
-add_filter( 'widget_text', 'do_shortcode'); 
+add_filter( 'widget_text', 'do_shortcode');
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' ); 
 
 
 /*function for serch form*/

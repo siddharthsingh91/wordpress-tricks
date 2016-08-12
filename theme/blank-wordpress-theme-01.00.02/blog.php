@@ -2,8 +2,8 @@
 /* Template Name: Blog
  * Develope by:siddharth singh
  * Email:siddharthsingh91@gmail.com
- * Author url:fileworld.in
- * @link http://fileworld.in
+ * Author url:http://www.sanditsolution.com/
+ * @link http://www.sanditsolution.com/
  * @package Siddharth Singh
  * @subpackage Siddharth Custom page
  * @since Custom Page 1.0

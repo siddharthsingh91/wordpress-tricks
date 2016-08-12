@@ -27,6 +27,14 @@
                 'walker'            => new wp_bootstrap_navwalker())
             );
         ?>
+        
+        <div class="navbar-right display_none_in_mobile">
+        <form class="navbar-form navbar-left" role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+          <div class="input-group">
+            <input type="text" class="form-control search-bar" placeholder="" aria-describedby="basic-addon2" name="s" id="s">
+            <span class="glyphicon glyphicon-search input-group-addon bg-white search-tab" id="submit_search_form" style="top:0;"></span> </div>
+        </form>
+      </div>
     </div>
   </div>
 </nav>  

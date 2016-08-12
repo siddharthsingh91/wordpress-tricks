@@ -7,6 +7,8 @@ var_dump($user_password_update);
 
 
 global $wpdb;
+$results = $wpdb->get_results( "SELECT * FROM `$table_name` WHERE ID = '1'");
+echo "or";
 $results = $wpdb->get_results( 'SELECT * FROM `$table_name`');
 echo "<pre>";
 var_dump($results);

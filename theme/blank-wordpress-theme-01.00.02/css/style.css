@@ -7,9 +7,11 @@
 body{background-color: #FFFFFF;}
 .no_margin{margin:0;}
 .no_padding{padding:0;}
+.social{ width:200px; float:right; margin-top:10px;}
+.social li{ list-style:none; float:left; margin-left:10px;}
 
 /****Custom CSS******/
-.navbar-nav{ margin-top:84px;}
+.navbar-nav{ margin-top:4px;}
 .margin-zero{margin:0px;}
 .padding-zero{padding:0px;}
 .navbar{ border-bottom:#B4B4B4 1px solid; box-shadow:#000000 0px 0px 4px 1px;}
@@ -33,109 +35,7 @@ body{background-color: #FFFFFF;}
 ****css for comment section****
 *******************************/
 
-#respond {
-	margin: 5% 0;
-}
-#comments {
-	display: inline-block;
-	clear: both;
-	width: 100%;
-	font-size: 0.8em;
-}
-ol.commentlist {
-	padding: 0;
-	margin: 5% 0;
-	list-style-type: none;
-}
-ul.children {
-	list-style-type: none;
-	padding-left: 5%;
-}
-article.comment {
-	margin: 5% 0;
-	padding-left: 80px;
-}
-.children article.comment {
-	padding-left: 60px;
-}
-.comment footer {
-	font-size: 0.8em;
-}
-.comment p {
-	margin: 0.25em 0;
-	line-height: 1.2;
-	color: #000;
-	font-family: chaparral-pro, serif;
-}
-img.avatar {
-	float: left;
-	position: inherit;
-	margin-left: -80px;
-}
-.children article.comment img.avatar {
-	margin-left: -60px;
-}
-.form-allowed-tags {
-	display: none;
-}
-#commentform label {
-	display: none;
-}
-p.comment-subscription-form {
-	clear: both;
-}
-.comment-subscription-form label {
-	display: inline-block !important;
-}
-input#subscribe_comments {
-	padding: 0!important;
-	margin: 0!important;
-	margin-right: 0.5em!important;
-	float: none !important;
-}
-#commentform p {
-	margin: 0;
-}
-#commentform input, #commentform textarea {
-	width: 95%;
-	padding: 2.5%;
-	background: #f7f7f7;
-	border: none;
-	margin: 2% 0;
-	font-size: 1em;
-	border-bottom: 2px dashed #d7d7d7;
-	font-family: chaparral-pro, serif;
-}
-#commentform input#submit, .button {
-	color: #fff;
-	border: none !important;
-	background: #66ABDD;
-	-webkit-appearance: none;
-}
-#commentform input#submit:hover, .button:hover {
-	background: #FFFFFF; color:#333333;
-}
-#commentform input#submit:active, .button:active {
-	background: #66ABDD;
-}
-.form-submit #submit{
-width:120px; padding:8px 10px !important;	
-	}
 
- @media ( min-width: 700px ) {
-#commentform input {
-	width: 25%;
-	float: left;
-}
-.comment-form-author input, .comment-form-email input {
-	margin-right: 5% !important;
-}
-}
- @media ( max-width: 700px ) {
-#commentform input#submit {
-	width: 100%!important;
-}
-}
  @media (max-width: 980px) {
 .triangle {
 	position: absolute;

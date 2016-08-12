@@ -130,7 +130,7 @@ if (!class_exists('WPPaginate')) {
 
 			$output = stripslashes($before);
 			if ($pages > 1) {
-				$output .= sprintf('<nav><ul class="pagination">', ($this->type === 'posts') ? '' : ' wp-paginate-comments');
+				$output .= sprintf('<ol class="wp-paginate%s">', ($this->type === 'posts') ? '' : ' wp-paginate-comments');
 				if (strlen(stripslashes($title)) > 0) {
 					$output .= sprintf('<li><span class="title">%s</span></li>', stripslashes($title));
 				}
@@ -176,7 +176,7 @@ if (!class_exists('WPPaginate')) {
 				if ($page < $pages && !empty($nextpage)) {
 					$output .= sprintf('<li><a href="%s" class="next">%s</a></li>', $nextlink, stripslashes($nextpage));
 				}
-				$output .= "</ul><nav>";
+				$output .= "</ol>";
 			}
 			$output .= stripslashes($after);
 

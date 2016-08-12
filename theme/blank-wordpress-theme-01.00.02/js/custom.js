@@ -40,12 +40,12 @@ jQuery(window).scroll(function () {
 var currPosition=jQuery(document).scrollTop();
 if(currPosition>100){ 
 jQuery('.logo-image').css({'height':'80px'});
-jQuery('.navbar-nav').css({'margin-top':'40px'});
-jQuery('.navbar').css({'min-height':'88px'});
+jQuery('.navbar-nav').css({'margin-top':'4px'});
+jQuery('.navbar').css({'min-height':'80px'});
 }else{
-jQuery('.logo-image').css({'height':'120px'});
-jQuery('.navbar-nav').css({'margin-top':'84px'});
-jQuery('.navbar').css({'min-height':'144px'});	
+jQuery('.logo-image').css({'height':'80px'});
+jQuery('.navbar-nav').css({'margin-top':'4px'});
+jQuery('.navbar').css({'min-height':'80px'});	
 	}
 })
 

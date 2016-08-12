@@ -1,0 +1,14 @@
+.woocommerce span.onsale{ background-color:#369FE0 !important;}
+.products li{ border:#D6D6D6 1px solid !important;}
+.products img{ margin-bottom:0px !important;}
+.products h3{ color:#666 !important; margin-top:-30px !important; background:#FFF !important; width:100%; padding:8px 8px !important; border-bottom:#EFF1F2 1px solid; z-index:100; display:inline-block;}
+.products .price{ background-color:#FFF; padding:8px; height:32px;}
+.products .price del,.products .price ins{ width:50%; float:left;}
+.woocommerce ul.products li.product .price{ color:#666 !important;}
+.products .add_to_cart_button{ background-color:#369FE0 !important; width:100%; text-align:center !important; color:#FFF !important; margin-top:0px !important; border-radius:0px !important;}
+.products .add_to_cart_button:hover{ background:#333 !important;}
+.single_add_to_cart_button{ background-color:#369FE0 !important;}
+.amount{ color:#666 !important;}
+.entry-content{ padding:20px !important;}
+input,textarea{border:#D9DADB 1px solid !important; padding:6px 8px !important; border-radius:3px !important; height:auto !important;}
+.tabs{ margin-bottom:0px !important;}

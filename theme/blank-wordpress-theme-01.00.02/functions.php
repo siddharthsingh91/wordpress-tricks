@@ -1,8 +1,10 @@
 <?php
-
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
 require_once('wp-custom-post-template/wp-custom-post-template.php');
+require_once('social-media/index.php');
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
 add_theme_support( 'post-thumbnails' ); 
 
 
@@ -26,12 +28,10 @@ add_filter( 'get_search_form', 'my_search_form' );
 
 
 
-/********************************************************-
-*****below function is use to call js and css form theme
-********************************************************/
-
+/***********************************************************
+*****below function is use to call js and css form theme****
+************************************************************/
 function theme_name_scripts() { 
-
 wp_enqueue_style( 'dsoble_theme_css', get_template_directory_uri() . '/css/jquery-ui-1.10.4.custom.min.css',array(),'1.1','all');
 wp_enqueue_style( 'dsoble_theme_css_one', get_template_directory_uri() . '/dist/css/bootstrap.css',array(),'1.1','all');
 wp_enqueue_style( 'dsoble_theme_css_two', get_template_directory_uri() . '/dist/css/bootstrap-theme.css',array(),'1.1','all');
@@ -41,9 +41,8 @@ wp_enqueue_script( 'query-10', get_template_directory_uri() . '/js/jquery-1.10.2
 wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/dist/js/bootstrap.min.js', array('jquery'), '1.0.0', true );	
 wp_enqueue_script( 'query-ui', get_template_directory_uri() . '/js/jquery-ui-1.10.4.custom.min.js', array('jquery'), '1.0.0', true );	
 wp_enqueue_script( 'bootstrap-paginator', get_template_directory_uri() . '/js/bootstrap-paginator.min.js', array('jquery'), '1.0.0', true );	
-wp_enqueue_script( 'jquery-show', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0.0', true );		
-
-
+wp_enqueue_script( 'jquery.innerfade', get_template_directory_uri() . '/js/jquery.newsTicker.js', array('jquery'), '1.0.0', true );
+wp_enqueue_script( 'jquery-show', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0.0', true );			
 }
 add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
 

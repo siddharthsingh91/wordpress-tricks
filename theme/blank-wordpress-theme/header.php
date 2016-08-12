@@ -18,9 +18,7 @@
 <![endif]-->
 <?php wp_head(); ?>
 </head>
-<body>
-
-
+<body style="background-color:#000;">
 <!-- Collect the nav links, forms, and other content for toggling -->
 <?php get_template_part( 'main', 'menu' ); ?>
 <!-- /.navbar-collapse -->

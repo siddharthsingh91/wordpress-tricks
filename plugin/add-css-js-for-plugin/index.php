@@ -15,7 +15,7 @@
 
 function register_script() {
 	wp_register_script( 'custom_jquery', plugins_url('/js/sidd.js', __FILE__));
-	wp_register_style( 'new_style', plugins_url('/css/sidd.css', __FILE__));
+	wp_enqueue_style( 'new_style', plugins_url('/css/sidd.css', __FILE__));
 	wp_enqueue_script( 'custom_jquery' );
 	wp_enqueue_style( 'new_style' );
 }

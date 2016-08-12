@@ -1,0 +1,7 @@
+.social-form{border:#666 1px solid; padding:20px; width:630px; border-radius:6px;}
+.social-form-input-contaner input{ height:40px; width:400px; border:none; background-color:#CCC; float:left;}
+.social-form-input-contaner label{ width:200px; display:block; padding:8px; float:left;}
+.clearBoth{ clear:both;}
+.submit-social-media-link{ border:#666 1px solid; cursor:pointer;}
+.submit-social-media-link:hover{ background-color:#FFF;}
+.sucess_message_social{ background-color:#0074A2; color:#FFF; padding:10px; width:400px;}
