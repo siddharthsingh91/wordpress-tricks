@@ -33,6 +33,7 @@ add_filter( 'get_search_form', 'my_search_form' );
 ********************************************************/
 
 function theme_name_scripts() { 
+global $wp_scripts;
 wp_enqueue_style('style', get_bloginfo('stylesheet_url'), false, '1.0', 'all');
 wp_enqueue_style( 'dsoble_theme_css', get_template_directory_uri() . '/css/jquery-ui-1.10.4.custom.min.css',array(),'1.1','all');
 wp_enqueue_style( 'dsoble_theme_css_one', get_template_directory_uri() . '/dist/css/bootstrap.min.css',array(),'1.1','all');

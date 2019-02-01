@@ -1,0 +1,16 @@
+/*
+*Developed and Maintaining by:Siddharth Singh, v 01.00
+*Detail:Use for Om contact form
+*Author URI: http://fileworld.in/
+*Email:siddharthsingh91@gmail.com
+*/
+.img-contaner{ width:100%; 
+height:100%; 
+background-color:rgba(155, 155, 155, 0.9); 
+z-index:10000; 
+top:0px; left:0px; 
+display: inline-block;
+padding-bottom:50%;
+position:absolute;
+}
+.img-contaner img,#img-cont{ position:fixed; top:20%; left:50%; margin-left:-120px;}
