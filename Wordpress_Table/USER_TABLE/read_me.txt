@@ -1,0 +1,9 @@
+wp_users
+wp_usermeta
+wp_blogs
+wp_blogmeta
+wp_signups
+wp_site
+wp_sitemeta
+wp_registration_log
+wp_blog_versions

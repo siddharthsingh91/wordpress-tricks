@@ -42,7 +42,7 @@ wp_nav_menu(array('theme_location'  => 'secondary-footer','menu_class' => 'nav n
 
 <?php $defaults = array(
 	'theme_location'  => '',
-	'menu'            => ,
+	'menu'            => '',
 	'container'       => 'div',
 	'container_class' => 'menu-{menu slug}-container',
 	'container_id'    => ,

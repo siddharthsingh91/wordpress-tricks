@@ -9,4 +9,4 @@
  * License: A "Slug" license name e.g. GPL2
  */
  ?>
- <img src="<?php echo plugins_url('/images/close.png', __FILE__);?>
+ <img src="<?php echo plugins_url('/images/close.png', __FILE__);?> />
